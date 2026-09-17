@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WallRoll — Privacy Policy</title>
+<style>
+  :root { --ink:#3A342F; --sub:#7A6F63; --accent:#8B4B6B; --bg:#F1E9DD; --card:#fff; --hair:#E3D3C4; }
+  *{box-sizing:border-box;} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Sans",sans-serif;}
+  .wrap{max-width:720px;margin:0 auto;padding:48px 22px 80px;}.brand{color:var(--accent);font-weight:700;} h1{font-size:1.9rem;margin:.2em 0 .1em;}
+  h2{font-size:1.15rem;margin:2em 0 .4em;}.meta{color:var(--sub);font-size:.9rem;margin-bottom:1.6em;}.summary{background:var(--card);border:1px solid var(--hair);border-radius:14px;padding:18px 20px;margin:1.5em 0;}
+  a{color:var(--accent);}.foot{margin-top:2.5em;padding-top:1.2em;border-top:1px solid var(--hair);color:var(--sub);font-size:.85rem;} ul{padding-left:1.2em;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="brand">WallRoll</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: September 18, 2026 · Last updated: September 18, 2026</p>
+
+  <div class="summary">
+    <strong>Local project data, limited anonymous usage data.</strong> Everything you enter — wall measurements,
+    project names, roll settings, and results — stays on your device and is never sent to us. WallRoll sends
+    limited anonymous usage events to a server operated by the developer. There is no account, advertising, or
+    third-party tracking.
+  </div>
+
+  <h2>Who we are</h2>
+  <p>WallRoll (“the app”, “we”) is provided by <strong>Softgrove</strong>, an independent developer based in Japan.
+  Contact: <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>.</p>
+
+  <h2>What data the app handles</h2>
+  <p>You may enter project names, wall measurements, door and window counts, roll dimensions, pattern repeat,
+  waste settings, and prices (“your data”). <strong>Your data is stored only locally on your device</strong> using
+  Apple's on-device storage framework. We never receive this data, and the app does not provide account sync or a
+  cloud backup service.</p>
+  <p><strong>No project content is sent.</strong> This includes project names, wall measurements, roll settings,
+  and calculation results.</p>
+
+  <h2>Anonymous usage analytics</h2>
+  <p>WallRoll sends events for app launches, running a wallpaper calculation, viewing the first result, reaching
+  an export or save limit as a non-Pro user (second project, PDF export, CSV export, share), Pro offer views,
+  purchase-related actions (purchase start, completion, and failure with a fixed reason), and restoring a
+  purchase. Each event contains the app version, a timestamp, the event name, and, when applicable, a paywall
+  trigger or product SKU.</p>
+  <p>These events do not include any identifier: there is no UUID, account ID, advertising identifier (IDFA), or
+  device identifier (IDFV) generated, stored, or sent. WallRoll does not access IDFA or IDFV. The events cannot be
+  linked back to a specific device or person; the developer can only see aggregate counts. Events are not sent
+  when running in the simulator or a debug build.</p>
+  <p>We use these events only to understand which features are used and where people stop in the app flow so we
+  can improve WallRoll. We do not use them for advertising or tracking.</p>
+
+  <p>Each request contains the app identifier (<code>a</code>), app version (<code>v</code>), event name
+  (<code>e</code>), timestamp (<code>t</code>), and a small properties object (<code>p</code>). Current properties
+  contain only fixed internal screen or flow names and, where relevant, an App Store product identifier. They
+  cannot contain user-entered content or free-form text. No device or installation identifier is included.</p>
+  <p>Cloudflare, Inc. hosts the endpoint as our infrastructure processor. Our Worker does not store source IP
+  addresses, User-Agent headers, raw event bodies, or raw timestamps. It stores daily aggregate counts only for
+  this app. Cloudflare may process network metadata to deliver and secure its service under its
+  data-processing terms.</p>
+
+  <h2>Export, sharing, and deletion</h2>
+  <ul>
+    <li><strong>Export / Share</strong>: You can export a PDF summary or a CSV file of your project and share it
+    using the system share sheet. Exported files are under your control once you share them; nothing is sent to
+    us. Non-Pro accounts are limited to one saved project and cannot export; reaching that limit is what triggers
+    the export-gate event described above.</li>
+    <li><strong>Delete</strong>: You can delete any project at any time. Deleting the app also removes its
+    on-device data.</li>
+  </ul>
+
+  <h2>Purchases and payments</h2>
+  <p>WallRoll offers an optional Pro unlock as a one-time purchase, sold and processed by <strong>Apple</strong>
+  through the App Store. We do not receive or store your payment information. Your purchase entitlement is
+  verified on-device through Apple’s StoreKit framework.</p>
+
+  <h2>Network connections</h2>
+  <p>The measurement and calculation features work fully offline. When a network is available, WallRoll may send
+  the anonymous usage events described above to a server operated by the developer. Apple’s system frameworks
+  also communicate with the App Store for purchases and purchase restoration.</p>
+
+  <h2>Disclaimer</h2>
+  <p>Roll counts produced by WallRoll are estimates based on standard trim allowances and the measurements you
+  enter. Your actual material needs depend on your wall irregularities, the specific paper you buy, and how it is
+  hung. WallRoll does not provide wallpapering instruction or installation advice; follow your paper
+  manufacturer's instructions and consult a qualified professional where needed.</p>
+
+  <h2>Children</h2>
+  <p>WallRoll is not directed to children under 13 (or the minimum age in your region). The app does not
+  knowingly collect personal information from children.</p>
+
+  <h2>Third parties</h2>
+  <p>WallRoll has no third-party analytics or advertising SDKs. We use Cloudflare, Inc. only to host the anonymous
+  event endpoint and aggregated database described above. We do not sell these events, provide them to third
+  parties for their own purposes, use them for advertising, or use them to track you across apps or websites.</p>
+
+  <h2>For users in the EU/EEA and UK (GDPR)</h2>
+  <p><strong>Controller postal address.</strong> Ryosuke Igarashi (Softgrove), Shibuya Dogenzaka Tokyu Bldg. 2F-C, 1-10-8 Dogenzaka, Shibuya-ku, Tokyo 150-0043, Japan.</p>
+  <p><strong>Controller.</strong> The controller for the limited usage analytics is Ryosuke Igarashi (Softgrove),
+  Japan. Contact: <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>.</p>
+  <p><strong>Purposes and legal bases.</strong> We process the limited usage events to understand aggregate
+  feature use and improve the app, based on our legitimate interests under Article 6(1)(f) GDPR. Your on-device
+  content is not sent to or processed by us. Purchases are processed by Apple; see
+  <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>. If you contact us, we process the
+  information you send to answer your request, also based on our legitimate interests.</p>
+  <p><strong>Recipients and international transfers.</strong> Cloudflare, Inc. processes the usage events for us
+  as hosting provider on its global network. This may involve transfers outside the EU/EEA or UK, including to
+  the United States, using safeguards such as the European Commission’s Standard Contractual Clauses and the UK
+  transfer addendum where applicable.</p>
+  <p><strong>Retention.</strong> We do not retain raw events. Daily aggregate counts are retained in a form that
+  contains no device or installation identifier. The current server code has no automatic deletion period for
+  those aggregate records. On-device content remains until you delete it or the app. Correspondence is kept only
+  as long as reasonably needed to answer and document the request.</p>
+  <p><strong>Your rights.</strong> Subject to applicable law, you may request access, rectification, erasure,
+  restriction, objection, and data portability by emailing
+  <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>. Because the events contain no person, device, or
+  installation identifier, we cannot identify aggregate records as relating to you. You may also lodge a
+  complaint with the data-protection supervisory authority in your country of residence or work, or where you
+  believe an infringement occurred.</p>
+  <p>Providing usage events is not a contractual or statutory requirement; the app’s core operation does not
+  depend on a successful telemetry request. We do not use automated decision-making or profiling that produces
+  legal or similarly significant effects.</p>
+
+  <h2>Changes</h2>
+  <p>We may update this policy. Material changes will be reflected here with a new “Last updated” date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>.</p>
+
+  <p class="foot">See the <a href="terms.html">Terms of Use</a>.</p>
+</div>
+</body>
+</html>
