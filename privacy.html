@@ -16,7 +16,7 @@
 <div class="wrap">
   <p class="brand">WallRoll</p>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective date: September 18, 2026 · Last updated: September 18, 2026</p>
+  <p class="meta">Effective date: September 18, 2026 · Last updated: 2026-10-18</p>
 
   <div class="summary">
     <strong>Local project data, limited anonymous usage data.</strong> Everything you enter — wall measurements,
@@ -38,26 +38,28 @@
   and calculation results.</p>
 
   <h2>Anonymous usage analytics</h2>
-  <p>WallRoll sends events for app launches, running a wallpaper calculation, viewing the first result, reaching
+  <p>WallRoll sends events for app launches, creating a sample project, reaching
   an export or save limit as a non-Pro user (second project, PDF export, CSV export, share), Pro offer views,
-  purchase-related actions (purchase start, completion, and failure with a fixed reason), and restoring a
-  purchase. Each event contains the app version, a timestamp, the event name, and, when applicable, a paywall
-  trigger or product SKU.</p>
-  <p>These events do not include any identifier: there is no UUID, account ID, advertising identifier (IDFA), or
-  device identifier (IDFV) generated, stored, or sent. WallRoll does not access IDFA or IDFV. The events cannot be
-  linked back to a specific device or person; the developer can only see aggregate counts. Events are not sent
-  when running in the simulator or a debug build.</p>
+  purchase-related actions (purchase start, completion, and failure with a fixed reason), promoted purchase
+  intent, and restoring a purchase. Each event contains the app version, a timestamp, an anonymous ID, the
+  event name, and, when applicable, a paywall trigger or product SKU.</p>
+  <p>The anonymous ID is a UUID generated at random on your device and stored in the app’s own settings.
+  It is not associated with your name, email, an account, the advertising identifier (IDFA), or the device
+  identifier (IDFV). WallRoll does not access IDFA or IDFV. Events are not sent when running in the simulator
+  or a debug build.</p>
   <p>We use these events only to understand which features are used and where people stop in the app flow so we
   can improve WallRoll. We do not use them for advertising or tracking.</p>
 
-  <p>Each request contains the app identifier (<code>a</code>), app version (<code>v</code>), event name
-  (<code>e</code>), timestamp (<code>t</code>), and a small properties object (<code>p</code>). Current properties
-  contain only fixed internal screen or flow names and, where relevant, an App Store product identifier. They
-  cannot contain user-entered content or free-form text. No device or installation identifier is included.</p>
+  <p>Each request contains the app identifier (<code>a</code>), app version (<code>v</code>), random
+  installation identifier (<code>d</code>), event name (<code>e</code>), timestamp (<code>t</code>), and a
+  small properties object (<code>p</code>). Current properties contain only fixed internal screen or flow
+  names and, where relevant, an App Store product identifier. They cannot contain project names, wall
+  measurements, roll settings, prices, calculation results, other user-entered content, or free-form text.</p>
   <p>Cloudflare, Inc. hosts the endpoint as our infrastructure processor. Our Worker does not store source IP
-  addresses, User-Agent headers, raw event bodies, or raw timestamps. It stores daily aggregate counts only for
-  this app. Cloudflare may process network metadata to deliver and secure its service under its
-  data-processing terms.</p>
+  addresses, User-Agent headers, raw event bodies, raw timestamps, or raw installation identifiers. It stores
+  daily aggregate counts and a per-day HMAC-SHA-256 hash of the random identifier, salted with the day and app
+  identifier so it changes each day. Cloudflare may process network metadata to deliver and secure its service
+  under its data-processing terms.</p>
 
   <h2>Export, sharing, and deletion</h2>
   <ul>
@@ -107,14 +109,14 @@
   as hosting provider on its global network. This may involve transfers outside the EU/EEA or UK, including to
   the United States, using safeguards such as the European Commission’s Standard Contractual Clauses and the UK
   transfer addendum where applicable.</p>
-  <p><strong>Retention.</strong> We do not retain raw events. Daily aggregate counts are retained in a form that
-  contains no device or installation identifier. The current server code has no automatic deletion period for
-  those aggregate records. On-device content remains until you delete it or the app. Correspondence is kept only
-  as long as reasonably needed to answer and document the request.</p>
+  <p><strong>Retention.</strong> We do not retain raw events. Daily aggregate counts and per-day HMAC hashes
+  are retained in a form not designed to identify a person. The current server code has no automatic deletion
+  period for these records. On-device content remains until you delete it or the app. Correspondence is kept
+  only as long as reasonably needed to answer and document the request.</p>
   <p><strong>Your rights.</strong> Subject to applicable law, you may request access, rectification, erasure,
   restriction, objection, and data portability by emailing
-  <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>. Because the events contain no person, device, or
-  installation identifier, we cannot identify aggregate records as relating to you. You may also lodge a
+  <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>. Because the random installation identifier is not linked to your identity and the server does not retain
+  the raw identifier, we may be unable to identify records as relating to you. You may also lodge a
   complaint with the data-protection supervisory authority in your country of residence or work, or where you
   believe an infringement occurred.</p>
   <p>Providing usage events is not a contractual or statutory requirement; the app’s core operation does not
